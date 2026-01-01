@@ -7,12 +7,11 @@ It serves as a practical platform for studying temperature regulation, testing c
 
 
 ## Overview
-The kit consists of two main components: the interface circuits and the Peltier cell (process). The image below shows the operating principle of the kit:
+The kit consists of two main components: the interface circuit and the Peltier cell (process). The image below shows the operating principle of the kit:
 
 <img src="images/block%20diagram2.jpg" alt="Kit principle" width="500">
 
-The controller is implemented on a computer using MATLAB/Simulink. 
-It communicates with the hardware interface circuit via Bluetooth serial communication, which handles all sensors and actuators connected to the Peltier cell.
+The controller is implemented on a computer using MATLAB/Simulink. It communicates with the hardware interface circuit via Bluetooth serial communication, which handles all sensors and actuators connected to the Peltier cell.
 
 
 
