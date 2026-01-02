@@ -59,9 +59,10 @@ The circuit board is shown in figure below:
 The repository is organized as follows:
 
 - `docs/` → Documentation, assembly instructions, and experiments  
-- `images/` → Images and figures used in the README and docs  
-- `firmware/` → Code for microcontroller
-- `software/` → Matlab script and functions 
+- `images/` → Images and figures used in the README and docs
+- `hardware/` → Schematics and PCB files 
+- `firmware/` → Microcontroller firmware
+- `software/` → MATLAB scripts and functions 
 - `LICENSE` → Licensing information
 
 ## License
