@@ -52,6 +52,15 @@ The circuit board is shown in figure below:
   <li> Wiring to the cell </li>
 </ol>
 
+## Educational Objectives
+
+## Repository Structure
+
+- `docs/` → Documentation, assembly instructions, and experiments  
+- `images/` → Images and figures used in the README and docs  
+- `firmware/` → Code for microcontroller
+- `software/` → Matlab script and functions 
+- `LICENSE` → Licensing information
 
 ## License
 
