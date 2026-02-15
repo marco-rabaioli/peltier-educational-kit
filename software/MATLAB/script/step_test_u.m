@@ -2,20 +2,19 @@ clear all
 close all
 clc
 
-% questo script consente di eseguire lo step test su u
-
-%% APRO LA COMUNICAZIONE SERIALE
-
-start_communication     % richiamo lo script per aprire la comunicazione
+% This script allows you to perform a step test by applying a step to the variable "u"
 
 
-%% PARAMETRI STEP:
+start_communication     % open the communication
 
-amplitude = 60;     % ampiezza step -100% / 100%
-duration = 250;     % durata esperimento in secondi
+
+%% STEP PARAMETERS:
+
+amplitude = 60;     % step amplitude [-100% / +100%]
+duration = 250;     % duration [s]
 
 temp = readTemp(1); 
-setActuators(0,0,0);    % spengo tutti gli attuatori
+setActuators(0,0,0);    % power off all actuators
 
 figure
 plot(0,temp,'xr-','linewidth',3)
@@ -35,8 +34,8 @@ ylabel('Temperature [°C]')
 
 
 while time<duration
-    setActuators(amplitude,0,0);    % invio comando attuatori
-    % leggo i sensori di temperatura
+    setActuators(amplitude,0,0);    % send the command to actuator
+    % read temperature sensors
     temp1 = readTemp(1)     
     temp2 = readTemp(2)
     c=clock-c1;
@@ -56,13 +55,13 @@ end
 
 
 
-setActuators(0,0,1);    % abilito ventola lato controllato per raffreddare
+setActuators(0,0,1);    % power on the fan in order to cool down the hot side
 
-% calcolo funzioni di trasferimento
+% transfer function computing
 
 [L,T,K,a,Pm_digital] = method_of_areas_vectors(t,y1,amplitude);
 [L,T,K,a,Pm_analog] = method_of_areas_vectors(t,y2,amplitude);
 
 Pm_digital
-
 Pm_analog
+
