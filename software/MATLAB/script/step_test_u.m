@@ -6,7 +6,7 @@ clc
 
 %% APRO LA COMUNICAZIONE SERIALE
 
-avvio_comunicazione     % richiamo lo script per aprire la comunicazione
+start_communication     % richiamo lo script per aprire la comunicazione
 
 
 %% PARAMETRI STEP:
@@ -64,4 +64,5 @@ setActuators(0,0,1);    % abilito ventola lato controllato per raffreddare
 [L,T,K,a,Pm_analog] = method_of_areas_vectors(t,y2,amplitude);
 
 Pm_digital
+
 Pm_analog
